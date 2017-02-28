@@ -1,5 +1,5 @@
 /*
-TAB replace, assumes TAB = 4 spaces
+replaces TAB characters in user input with spaces, assumes TAB = 4 spaces
 */
 
 #include<stdio.h>
@@ -56,7 +56,7 @@ int main(void)
     for (z = 0; z < (counter % 4); z++) {
         printf("| ");
     }
-    printf("|");
+    printf("|\n");
 
     return 0;
 }
