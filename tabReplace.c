@@ -27,22 +27,21 @@ int main(void)
     while (value != '\n') {
         // counts the character accordingly if it is a space character
         if (isspace(value)) {
-            counter++;
-            flag = 1;
-            if (4 == counter) {
-                printf("|    ");
-                counter = 0;
+            if (value == '\t') {
+                counter+=4;
+            } else if (value == ' ') {
+                counter++;
             }
+            flag = 1;
         // printing information to the user through stdout
         // prints the remaining spaces and non-space character read
         } else {
             for (x = 0; x < counter; x++) {
-                printf("| ");
+                printf(" ");
             }
             counter = 0;
             // tests if an ending marker needs to be printed
             if (1 == flag) {
-                printf("|");
                 flag = 0;
             }
             putchar(value);
@@ -51,12 +50,12 @@ int main(void)
     }
     // print any remaining TABs and spaces after last non-space character
     for (y = 0; y < (counter / 4); y++) {
-        printf("|    ");
+        printf(" ");
     }
     for (z = 0; z < (counter % 4); z++) {
-        printf("| ");
+        printf(" ");
     }
-    printf("|\n");
+    printf("\n");
 
     return 0;
 }
