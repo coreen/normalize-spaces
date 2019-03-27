@@ -1,8 +1,15 @@
 Generate executable via
 ```
-gcc -Wall -g -std=c11 -o tabReplace tabReplace.c
-gcc -Wall -g -std=c11 -o spaceReplace spaceReplace.c fileProcessing.c
+gcc -Wall -g -std=c11 -o tabReplace tabReplace.c fileProcessing.c replacement.c
+gcc -Wall -g -std=c11 -o spaceReplace spaceReplace.c fileProcessing.c replacement.c
 ```
+
+Run with
+```
+./tabReplace
+./spaceReplace
+```
+
 
 Test file execution with `server.py`
 
